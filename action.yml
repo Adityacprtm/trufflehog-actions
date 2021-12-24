@@ -1,0 +1,12 @@
+name: "Secret Scan with Trufflehog"
+description: "Scan Secret Repository with Basic Trufflehog"
+author: "Adityacprtm"
+inputs:
+  arguments:
+    description: "Argument options for Trufflehog scan"
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.arguments }}
